@@ -1,0 +1,4 @@
+in the nerwork sheet "routing" 
+problem 2 refers to figure 5-7
+problem 3 refers to figure 5-13(a)
+this figures are in computer networks "tanenbaum"

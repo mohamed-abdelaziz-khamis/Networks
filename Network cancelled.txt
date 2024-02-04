@@ -1,0 +1,14 @@
+the part at the early beginning (introduction) 
++the part where way compute the delay of the 
+concentrators (all the set of papers about the 
+concentrators were cancelled except the problem of 
+assigning sites to concentrators using ADD & DROP 
+approaches)
+
+Delay analysis 
+ATM cube (in the long "revision" lecture of Dr Nazeih)
+ 
+what about the LLC?
+
+(Delay & Cube of ATM)
+LLC and DLL

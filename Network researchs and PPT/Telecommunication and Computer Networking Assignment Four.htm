@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.scis.nova.edu/~yaochin/653-04.htm -->
+<HTML><HEAD><TITLE>Telecommunication and Computer Networking Assignment Four</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY 
+background="Telecommunication and Computer Networking Assignment Four_files/bg653.gif"><BR>
+<H3>Chapter 7. Network Layer</H3>
+<OL type=1>
+  <LI value=4>
+  <P align=justify>Describe three types of decentralized routing. What are the 
+  advantages and disadvantages of each?</P>
+  <P align=justify>Static Routing. The routing table is developed by the network 
+  manager and will be modified only when a computer is added to or removed from 
+  the network. The network manager uses Routing Information Protocol to develop 
+  the routing table. The advantage of static routing is that it will not take 
+  too much network resource to develop and maintain the routing table. The 
+  disadvantage is that it cannot adjust the route to the network traffic.</P>
+  <P align=justify>Dynamic Routing. To improve network routing performance, 
+  dynamic routing keeps updating the fastest possible route so that the messages 
+  sent can avoid the heavy traffic on the network. The advantage is that the 
+  messages always go the fastest possible route in the network. However, in 
+  order to do so, it needs more processing time by each computer in the network 
+  and the transmissions of the status information slow down the network.</P>
+  <P align=justify>Broadcast Routing. Broadcast routing does not do routing. It 
+  simply sends the message to all computers in the network. The message is 
+  processed only by the computer that the message is addressed to. This routing 
+  is typically used only in bus networks. The advantage is that no resource is 
+  wasted to process or maintain the routing information. The disadvantage is 
+  that the security might become a problem and each computer in the network 
+  wastes time to receive the messages and exams if the message is addressed to 
+  it.</P>
+  <LI value=5>
+  <P align=justify>What are the differences between connectionless and 
+  connection-oriented routing?</P>
+  <P align=justify>Connectionless routing. In this routing, each packet is 
+  treated as an individual message and each can choose its own route to the 
+  destination. Thus, it is very likely that a message of more than one packet is 
+  sent through many different paths. Because the packets on different paths may 
+  be transmitted with different speeds, the packets arrived may not be in the 
+  same order as they are sent. Therefore, there must be a sequence number in 
+  every packet in order to identify the orders of the packets. The destination 
+  computer has to perform the reassembly to obtain the entire message.</P>
+  <P align=justify>Connection-oriented routing. In this routing, a virtual 
+  circuit is established between the sender and the receiver. It is looks as if 
+  there is a point-to-point connection between the two computers. The packets of 
+  a message follow the same route all the way to the receiver. For the route is 
+  unique, the packets must arrive in the order that they are sent. Therefore, 
+  there is no need to put sequence numbers in the packets and the reassembly is 
+  much easier.</P>
+  <LI value=23>What is the primary problem with SNA? 
+  <P align=justify>SNA, Systems Network Architecture, is a proprietary 
+  architecture and protocols for network developed by IBM. It uses non-standard 
+  protocols at the network layer and above that makes it incompatible with the 
+  OSI model. The primary problem with SNA results from its incompatibility. For 
+  it is a proprietary architecture, it is very difficult to integrate SNA 
+  networks with any other network that use the standard network protocols. 
+  Routing messages requires special equipment to achieve the goal. For this 
+  reason, some network managers have to build both SNA network and standard LAN 
+  network in the same office in order to use the two types of network 
+  architecture.</P></LI></OL><BR>
+<H3>Chapter 8. Local Area Networks</H3>
+<OL type=1>
+  <LI value=4>
+  <P align=justify>Describe the distinctions made between the different types of 
+  LANs.</P>
+  <P align=justify>Dedicated Server Networks. A Dedicated Server Network has one 
+  or more computers dedicated to provide access to files or network resources 
+  such as printers and communication equipment. A dedicated server is a powerful 
+  computer that provides the aforementioned service to any other computer in the 
+  network. The most common type is file servers. They provide access to numerous 
+  files and manage the addition, modification and deletion of the files. Another 
+  popular server type is print server. A print server process all printing 
+  requests in the network so that the other computers can save their power or 
+  resources for processing data. Communication server is another type of server 
+  that processes network communication work. For those servers handle most of 
+  the common works, the other computers can focus their processing ability in 
+  the usage of the applications. Dedicated server networks can connect with 
+  almost any other type of network.</P>
+  <P align=justify>Peer-to-Peer Networks. In a peer-to-peer network, there is 
+  not a single computer that handles sophisticated work for the network 
+  environment. Each computer in the network is equivalent to any one else. Each 
+  computer in the network processes whatever it needs to process. They only 
+  communicate with other computers when they need information that is stored in 
+  other computers. In this type of network environment, any computer can share 
+  their storage devices as well as output devices to the other computers.</P>
+  <P align=justify>Zero-Slot LANs. Zero-slot LANs work like peer-to-peer LANs, 
+  only they have the least capability comparing to the aforementioned two 
+  networks. A zero-slot LAN does not need network interface cards. The zero-slot 
+  LAN adapters are simply plugged into serial or parallel ports. Therefore, they 
+  will not take precious slots which can be left for other devices. However, for 
+  this reason, the LAN will have less efficiency and cannot perform very 
+  sophisticated works.</P>
+  <LI value=12>Briefly describe CSMA, CD, and CA. 
+  <P align=justify>CSMA, Carrier Sense Multiple Access. This is a system used in 
+  contention networks. The computers in the network listen to the network and 
+  detect the exist of a carrier. If the network is silent, which means there is 
+  no carrier in the network, the computer can then send messages. This system 
+  usually works with collision detection or collision avoidance to perform the 
+  network access control.</P>
+  <P align=justify>CD, Collision Detection. Before or when sending message, the 
+  computer detects that if there is collision detection in the network. If there 
+  is not, the computer can send the message. If a collision happened, that means 
+  the message sent is not successful. The computers have to wait for a random 
+  period of time until the network is not occupied and then resend the 
+  message.</P>
+  <P align=justify>CA, Collision Avoidance. This protocol sends a small packet 
+  prior to the message to detect if a collision happens. The advantage of this 
+  protocol is that if a collision does happen, the computer wastes only a tiny 
+  amount of time of sending the packet. The recovery from collisions is 
+  faster.</P>
+  <LI value=14>
+  <P align=justify>Define the terms 1Base5, 10Base2, 10Base 5, 10Broad 36, and 
+  10BaseT.</P>
+  <P align=justify>1Base5. This is the coaxial cable that is used for 1M bps 
+  baseband transmission and the signals can last as long as 500 meters.</P>
+  <P align=justify>10Base2. This is the coaxial cable that is used for 10M bps 
+  baseband transmission and the signals can last as long as 200 
+  meters(185meters, to be precise).</P>
+  <P align=justify>10Base5. This is the coaxial cable that is used for 10M bps 
+  baseband transmission and the signals can last as long as 500 meters.</P>
+  <P align=justify>10Broad36. This the coaxial cable that is used for 10M bps 
+  broadband transmission and the signals can last as long as 3600 meters.</P>
+  <P align=justify>10BaseT. This is the twisted pair wires that are used for 10M 
+  bps baseband transmission and the signals can last as long as 100 meters.</P>
+  <LI value=28>
+  <P align=justify>What is Ethernet? How does it work? What is token ring? How 
+  does it work?</P>
+  <P align=justify>Ethernet is a network of bus topology. Every computer in the 
+  network is connected to the central circuit. There are two terminators located 
+  at the two ends of the circuit to provide the reflection of the signals. Due 
+  to the convenience of the maintenance, the physical topology of an ethernet 
+  LAN usually appears to be the in star topology. The media access control 
+  protocol is CSMA/CD. In a few users and low usage environment, it provides a 
+  very good performance.</P>
+  <P align=justify>Token Ring is a network of ring topology developed by IBM. 
+  Every computer in the network is connected to the central ring circuit. Due to 
+  the convenience of the maintenance, the physical topology of a token ring LAN 
+  also appears to be in star topology. The media access control is achieved by 
+  utilizing tokens. A token is transmitted in the circuit to indicate the status 
+  of the network. If a computer receives a free token, it has the right to send 
+  messages. If it does not have any message to send, it simply passes the token 
+  to next computer. If the computer has messages to send, it changes the status 
+  of the token and attaches the message to the token. It then sends the token to 
+  next computer. When a computer receives a busy token, it exams if the token is 
+  addressed to the computer. If the message is for the computer, the computer 
+  gets the message and sends an acknowledgment back to the sender. If the 
+  message is not for the computer, it simply passes it to next computer. Token 
+  ring networks have better performance than ethernet networks when the network 
+  has a lot of users and higher usage. </P></LI></OL><BR>
+<H3>Chapter 9. Metropolitan and Wide Area Networks</H3>
+<OL type=1>
+  <LI value=4>What happens to messages when a PAD facility is used? 
+  <P align=justify>PAD, Packet Assembly and Disassembly, is a device to divide a 
+  message into smaller packets and reassemble the packets to a message. When a 
+  message goes through a PAD, it is disassembled into packets according to 
+  specific protocols. Every packet is attached with certain information for 
+  routing and reassembling purpose. When the packets arrive at a PAD, the PAD 
+  collects all packets and assembles them to a message. The message then is sent 
+  to processed by the receiver.</P>
+  <LI value=15>Discuss why frame relay might replace X.25. 
+  <P align=justify>Frame relay has three major differences from X.25.</P>
+  <P align=justify>First, frame relay does not perform error control. It checks 
+  for errors and discards the messages if errors are found. The applications 
+  have to deal with the error correction as well as lost messages.</P>
+  <P align=justify>Second, frame relay uses variable length packets, called 
+  frames. The frames can be up to 8K bytes and have only 48 overhead bits. The 
+  transmission rate of information bits is higher.</P>
+  <P align=justify>Third, frame relay allows computers to negotiate a committed 
+  information rate and a maximum allowable rate. A committed information rate is 
+  the guarantee of minimum transmission rate when network is busy. A maximum 
+  allowable rate is the maximum possible transmission rate.</P>
+  <P align=justify>Due to the aforementioned three differences, frame relay 
+  provides better performance and higher efficiency. Frame relay networks are 
+  usually many times faster than X.25 networks. Therefore, frame relay might 
+  replace X.25 in the near future.</P>
+  <LI value=16>Discuss why ATM might replace frame relay. 
+  <P align=justify>ATM, Asynchronous Transfer Mode, is pretty like frame relay. 
+  It utilizes packet switched technique and error control is the responsibility 
+  of the destination computer. Maximum transmission rate is negotiable. However, 
+  there are three major differences that makes ATM a better transmission 
+  technique than frame relay.</P>
+  <P align=justify>First, ATM uses fixed length packet, called cell, to transfer 
+  messages. A cell is 53 bytes long with a 5-byte overhead. Small packet is more 
+  suitable for voice transmissions for it is easier and faster to reassemble and 
+  route. Also, lost of a packet has very little effect on voice messages.</P>
+  <P align=justify>Second, ATM circuits can be multiplexed into faster ones. 
+  Therefore, ATM can provide transmission rate as fast as SONET. The 
+  transmission rate can be 1.5M bps all the way up to 622.08M bps. Also, ATM is 
+  able to be scaled down to what fractional T-1 provides. It is scaleable.</P>
+  <P align=justify>Third, ATM provides forward error correction so that the 
+  receiver can perform error correction if an error occurred instead of asking 
+  for resend the message. This prevents some packets from discarded. However, it 
+  works only if the errors are single-bit ones.</P>
+  <P align=justify>Due to the aforementioned differences, ATM can provide better 
+  and faster data transmission than frame relay can do. Therefore, ATM has the 
+  advantages to replace frame relay.</P></LI></OL>
+<HR>
+
+<CENTER>[<A href="http://www.scis.nova.edu/~yaochin/index.html">HOME</A>] [<A 
+href="http://www.scis.nova.edu/~yaochin/mmis653.htm">Course MMIS653</A>] <BR>[<A 
+href="http://www.scis.nova.edu/~yaochin/653-01.htm">Assignment One</A>] [<A 
+href="http://www.scis.nova.edu/~yaochin/653-02.htm">Assignment Two</A>] [<A 
+href="http://www.scis.nova.edu/~yaochin/653-03.htm">Assignment Three</A>] [<!-A HREF="653-04.htm">Assignment Four</A>] <NOBR>[<A 
+href="http://www.scis.nova.edu/~yaochin/653-05.htm">Assignment Five</A>]</NOBR> 
+<NOBR>[<A href="http://www.scis.nova.edu/~yaochin/653-p.htm">Research 
+Paper</A>]</NOBR> </CENTER>
+<HR>
+<BR>Copyright © 1998 by Yao-Chin Huang. All rights reserved. <BR>Created : 26, 
+May, 1998 <BR>Last Update : 1, January, 1999 </BODY></HTML>

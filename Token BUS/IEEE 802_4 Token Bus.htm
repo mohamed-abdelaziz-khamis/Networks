@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://www.sju.edu/~jhodgson/netw/tokenbus.html -->
+<HTML><HEAD><TITLE>IEEE 802.4 Token Bus</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<P>
+<H2>IEEE 802.4 Token Bus </H2>
+<P>
+<UL>
+  <LI>IEEE 802.4 
+  <LI>GM. 
+  <LI>A Logical Ring 
+  <LI>A Physical Coaxial Cable 
+  <LI>Elaborate Protocols are required for entering or leaving the ring. 
+  <LI></LI></UL><PRE>Field                       Size                
+Preamble                1 or more                
+Start Delimiter              1                
+Destination Address        2 to 6                
+Source Address             2 to 6                 
+Data                       0 - 8182                 
+Checksum                     4                
+End Delimiter                1 
+</PRE>
+<H3>Maintaining the logical ring</H3><PRE>Control Field            Name                 Meaning                	
+00000000          Claim_token            Claim Token During 
+                                           Initialization                
+00000001           Solicit_sucessor_1    Allow Stations to 
+                                         enter the ring                
+00000010           Solicit_sucessor_2     Allow Stations to 
+                                          enter the ring                
+00000011            Who_follows           Recover from lost token                
+00000100            Resolve_contention    Used when multiple 
+                                          stations want in                
+00001000            Token                 Pass the token                
+00001100            Set_Sucessor          Allow station to 
+                                          leave the ring
+</PRE>
+<HR>
+
+<P><A href="http://www.sju.edu/~jhodgson/netw/nethome.html"><IMG 
+src="IEEE 802_4 Token Bus_files/goback.gif"></A> Return to Networks home page 
+<P>Last Changed: 15 September 1995 </P></BODY></HTML>

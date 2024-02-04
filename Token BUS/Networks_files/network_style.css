@@ -1,0 +1,84 @@
+BODY.main {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../images/background.gif) #ffffe0; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+BODY.header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(background.gif) #e0e0d0; PADDING-BOTTOM: 0px; MARGIN: 0em; COLOR: #000000; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+BODY.index {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../images/background.gif) #ffffe0; PADDING-BOTTOM: 0px; MARGIN: 0em; COLOR: #000000; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H2.center {
+	FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: center
+}
+H3.index {
+	MARGIN: 1em; FONT-FAMILY: arial, helvetica, sans-serif
+}
+H4.center {
+	FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: center
+}
+H4.left {
+	MARGIN: 0em 2em; TEXT-INDENT: 0em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: left
+}
+DIV.center {
+	TEXT-ALIGN: center
+}
+DIV.right {
+	TEXT-ALIGN: right
+}
+DIV.left {
+	TEXT-ALIGN: left
+}
+DIV.justify {
+	TEXT-ALIGN: justify
+}
+P.main {
+	FONT-SIZE: 10pt; MARGIN: 1em 2em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: justify
+}
+P.index {
+	FONT-SIZE: 10pt; MARGIN: 1em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: left
+}
+P.header {
+	FONT-SIZE: 10pt; MARGIN: 0em 1em 1em; FONT-FAMILY: arial, helvetica, sans-serif
+}
+P.tableright {
+	FONT-SIZE: 10pt; MARGIN: 0em 1em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: right
+}
+P.tableleft {
+	FONT-SIZE: 10pt; MARGIN: 0em 1em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: left
+}
+P.tablejustify {
+	FONT-SIZE: 10pt; MARGIN: 0em 1em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: justify
+}
+P.tablecenter {
+	FONT-SIZE: 10pt; MARGIN: 0em 1em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: center
+}
+P.tablesmall {
+	FONT-SIZE: 10pt; FONT-FAMILY: arial, helvetica, sans-serif
+}
+P.command {
+	FONT-SIZE: 10pt; MARGIN: 0em; FONT-FAMILY: courier; TEXT-ALIGN: left
+}
+P.center {
+	FONT-SIZE: 10pt; MARGIN: 1em 2em; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-ALIGN: center
+}
+A:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #008000; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #008000; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #008000; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #ff0000; FONT-FAMILY: arial, helvetica, sans-serif; TEXT-DECORATION: none
+}
+UL.main {
+	FONT-SIZE: 10pt; MARGIN: 1em 2em 1em 3em; FONT-FAMILY: arial, helvetica, sans-serif
+}
+OL.main {
+	FONT-SIZE: 10pt; MARGIN: 1em 2em 1em 3em; FONT-FAMILY: arial, helvetica, sans-serif
+}
+LI {
+	FONT-SIZE: 10pt; MARGIN: 1em 3em; FONT-FAMILY: arial, helvetica, sans-serif
+}

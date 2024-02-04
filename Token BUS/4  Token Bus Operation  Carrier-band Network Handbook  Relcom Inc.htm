@@ -1,0 +1,761 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0060)http://www.relcominc.com/carrier-band/handbook/chapter04.htm -->
+<HTML><HEAD><TITLE>4 | Token Bus Operation | Carrier-band Network Handbook | Relcom Inc.</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="Dana Lommen" name=author>
+<META 
+content="Explanation of token bus operation from the Relcom Carrier-band Network Handbook." 
+name=description>
+<META 
+content="Address, Collision, Contention, Deterministic, Destination Address, End Delimiter, Frame, Frame Check Sequence, FCS, Frame Control, Logical Ring, Medium Access Control, MAC, Octet, Preamble, Priority, Protocol, Response Window, Service, Slot Time, Source Address, Start Frame Delimiter, Token, Token Passing, Token Rotation Time, relcom, carrierband, carrier-band" 
+name=keywords>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#000000 link=#000080 bgColor=#ffffff>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD><FONT face="Georgia, Times New Roman, Times"><A 
+      href="http://www.relcominc.com/index.htm"><IMG height=60 
+      alt="Relcom Inc. | Industrial LAN Wiring Components and Testers for Fieldbus and Carrier-band Networks" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/relcomlogo2.gif" 
+      width=400 border=0></A></FONT></TD>
+    <TD><FONT face="Georgia, Times New Roman, Times"><IMG height=60 
+      alt="Address | Relcom Inc. | Industrial LAN Wiring Components and Testers for Fieldbus and Carrier-band Networks" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/address2.gif" 
+      width=200 border=0></FONT></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none" 
+    colSpan=2><FONT face="Georgia, Times New Roman, Times"><A 
+      href="http://www.relcominc.com/index.htm"><IMG height=40 
+      alt="Go to the Relcom Home Page" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/homebar.gif" 
+      width=74 border=0></A><A 
+      href="http://www.relcominc.com/fieldbus/index.htm"><IMG height=40 
+      alt="Go to the Relcom Fieldbus Page" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/fieldbusbar.gif" 
+      width=83 border=0></A><A 
+      href="http://www.relcominc.com/carrier-band/index.htm"><IMG height=40 
+      alt="Go to the Relcom Carrier-band Page" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/carrierbandbar.gif" 
+      width=117 border=0></A><A 
+      href="http://www.relcominc.com/litrequest.htm"><IMG height=40 
+      alt="Request Literature from Relcom" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/litrequestbar.gif" 
+      width=164 border=0></A><A href="http://www.relcominc.com/contact.htm"><IMG 
+      height=40 alt="How to contact and order from Relcom" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/contactbar.gif" 
+      width=77 border=0></A><A href="http://www.relcominc.com/pricing.htm"><IMG 
+      height=40 alt="How to get Prices for Relcom Fieldbus Products" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/pricingbar.gif" 
+      width=85 border=0></A></FONT></TD></TR>
+  <TR>
+    <TD colSpan=2><STRONG><BIG><BIG><FONT 
+      face="Verdana, Arial, Helvetica">Carrier-band Network 
+      Handbook</FONT></BIG></BIG></STRONG></TD></TR>
+  <TR>
+    <TD colSpan=2><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD></TR>
+  <TR>
+    <TD colSpan=2><BIG><FONT face="Verdana, Arial, Helvetica">| <A 
+      href="http://www.relcominc.com/carrier-band/handbook/index.htm">Index</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter01.htm">1</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter02.htm">2</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter03.htm">3</A> 
+      <STRONG><BIG><A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter04.htm">4</A></BIG></STRONG> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter05.htm">5</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter06.htm">6</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter07.htm">7</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter08.htm">8</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/glossary.htm">G</A> 
+      |</FONT></BIG></TD></TR>
+  <TR>
+    <TD colSpan=2><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD></TR>
+  <TR>
+    <TD colSpan=2><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD></TR>
+  <TR>
+    <TD colSpan=2><BIG><BIG><BIG><FONT face="Verdana, Arial, Helvetica">Token 
+      Bus Operation</FONT></BIG></BIG></BIG></TD></TR></TBODY></TABLE></CENTER></DIV>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD></TR>
+  <TR>
+    <TD><FONT face="Georgia, Times New Roman, Times">On a local area network 
+      such as carrier-band, the cable system is shared by all the stations on 
+      the network. Any station can transmit; all stations can receive what is 
+      being transmitted. The shared cable is like a telephone party line. There 
+      are two questions that have to be answered for a shared cable:
+      <P>1. Which station can transmit at what time? Two stations cannot 
+      transmit at the same time or the signals will be garbled.</P>
+      <P>2. For whom is the transmission intended? Every modem receives every 
+      transmission, but the transmission is intended for only one particular 
+      station.</FONT><FONT face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>Shared-Media Protocols</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">To use a shared 
+      cable, all the stations must follow the same rules. These rules are called 
+      a <B>protocol. </B>For the modems described in Section 3, the protocol 
+      consists of the data rate and the way that ones and zeros are represented 
+      by the FSK signals on the cable. All the stations have to send data at the 
+      same rate and represent ones and zeros by the same kinds of signals; 
+      otherwise the stations cannot communicate. Another protocol determines 
+      which station is allowed to transmit. how much data that station can send 
+      at a time, and which station uses the data that is received by every 
+      station.</P></FONT><FONT face="Verdana, Arial, Helvetica">
+      <P><BIG>Frames</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">Because the 
+      cable is shared, no one station may transmit all the time. Instead, a 
+      station sends data in chunks called <B>frames. </B>A frame is a sequence 
+      of contiguous bits that can be up to 8214 bytes long. In data 
+      communications terminology, an 8-bit byte is called an 
+      <B>octet.</B></P></FONT><FONT face="Verdana, Arial, Helvetica">
+      <P><BIG>Addresses</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">On a shared 
+      cable, when one station transmits a frame, all stations receive this 
+      transmission. However, the frame is intended for only one specific 
+      station, so there must be a way to identify each station. Therefore, a 
+      unique <B>address </B>is assigned to each station, like a number on a 
+      house. Each station knows its own address.</P>
+      <P>The transmitting station puts address information into the frame as 
+      part of the data in the frame. This information is like the house number 
+      in the address on an envelope. The part of the frame that has the address 
+      data is called the <B>address field. </B>The address field is 12 octets 
+      long. Six octets are used for the <B>destination address, </B>the address 
+      of the station for which the frame is intended; six octets are used for 
+      the <B>source address, </B>the address of the station transmitting.</P>
+      <P>All the stations on the network receive each frame. Each station 
+      examines the received frame to see if the destination address contains its 
+      address. If the address does not match, the frame is discarded; if the 
+      address matches, the frame is kept.</FONT><FONT 
+      face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>Media Access</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">When a cable 
+      system is shared, a protocol is needed to determine which station has the 
+      right to transmit, or to access the medium, at any given time. If two 
+      stations transmit at the same time, there is a <B>collision, </B>i.e., the 
+      data is garbled. A protocol is needed to eliminate collisions.</P>
+      <P>For factory applications, medium access protocol must allow the user to 
+      calculate, for any given network, how long it will be, in the worst 
+      collision case, before any given station has the right to transmit. If the 
+      network access time can be calculated, the network is called 
+      <B>deterministic. </B>Deterministic networks are needed to control 
+      real-time processes. The <B>token passing </B>network protocol for media 
+      access provides a way for stations to share the cable system in a way that 
+      avoids collisions and makes the network deterministic.</FONT><FONT 
+      face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>Token-Passing Protocol</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">On a 
+      token-passing network, only one station at a time has the right to 
+      transmit. That station possesses a <B>token. </B>When the token-holding 
+      station is through transmitting normal data, it sends a <B>token frame, 
+      </B>which is a short message to the next station to tell it that it now 
+      has the right to transmit. The token is passed from station to station on 
+      the network. Some stations that get the token will transmit normal data; 
+      stations that have no data to transmit will simply pass the token on to 
+      the next station. All stations participating in the token passing form a 
+      <B>logical ring </B>as is shown in Figure 4-1.</P></FONT><FONT 
+      face="Verdana, Arial, Helvetica">
+      <P><IMG height=187 alt="Token-Passing Logical Ring" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/figure0401.gif" 
+      width=600><BR>Figure 4-1. Token-Passing Logical Ring</FONT><FONT 
+      face="Georgia, Times New Roman, Times"></P>
+      <P>Stations 235, 118, 73, 57, 26, 14,235... pass the token to each other 
+      in that order. The token is passed from a higher-addressed station to a 
+      lower one. The lowest-addressed station passes the token to the 
+      highest-addressed station. The time it takes for the token to be passed 
+      around the logical ring is called the <B>token rotation time. </B>For ease 
+      of explanation, the stations have been arranged in a circular placement on 
+      the cable. However, this need not be the case in a real network. Any 
+      station on the cable can have any address so long as it is unique. 
+      Stations 51 and 179 are not on the logical ring. They can receive frames 
+      but cannot send them. The basic token-passing protocol is simple, but 
+      there are a number of problems that have to be considered.</P><B>
+      <P>Problem 1: </B>What if a station on the logical ring fails and cannot 
+      receive the token?</P><B>
+      <P>Solution: </B>Each station knows not only the next station's address 
+      but also the previous token-holder's address. If a station tries to pass 
+      the token to its successor, but hears no subsequent activity on the 
+      medium, then it tries again. If again it hears no activity it sends out a 
+      <B>who__follows </B>frame asking for the successor of the failed station. 
+      The successor of the failed station then sends a <B>set__successor 
+      </B>frame identifying itself to the token holder. The station holding the 
+      token now knows a new successor and passes the token to it.</P><B>
+      <P>Problem 2:</B> How does a new station get into the logical ring?</P><B>
+      <P>Solution: </B>Periodically, a station holding the token will send out a 
+      <B>solicit__successor </B>frame asking if there are other stations that 
+      want to get in on the logical ring. The solicit-successor frame creates a 
+      <B>response window. </B>The response window is a period of time during 
+      which the token-holding station can accept an additional member of the 
+      logical ring. If another station does want to get into the logical ring, 
+      it sends back a <B>set__successor </B>frame and lets the token holder know 
+      that it is the next successor.</P><B>
+      <P>Problem 3: </B>What if a number of stations want to get into the 
+      logical ring at the same time during a response window?</P><B>
+      <P>Solution: </B>If a number of stations want to get into the logical ring 
+      during a response window, they will all send out the set-successor frame, 
+      there will be a collision, and the soliciting station will get a garbled 
+      message. The station holding the token senses the collision and sends out 
+      a <B>resolve__contention </B>frame. After this frame, the stations that 
+      want to get in on the logical ring <B>contend </B>for the privilege of 
+      getting into the logical ring in an orderly manner. Before describing how 
+      this contention proceeds, a characteristic of the network must be 
+      defined.</P><B>
+      <P>Slot time </B>is the longest amount of time any station needs to wait 
+      for another station to respond. This delay is equal to the time it takes 
+      for a <B></B>signal from the initiating station to propagate over the 
+      cable and be received by the addressed station, for the addressed station 
+      to send out a response frame, and for the response frame signal to 
+      propagate back over the cable again. In any given network, the slot time 
+      must be calculated and put into each station as a network parameter.</P>
+      <P>Signals on the cable travel at about 82% of the velocity of light. This 
+      means that a meter of cable delays a signal about 4.1 nano-seconds. The 
+      typical delay of a single station's response is about 10 micro-seconds. A 
+      network with a 500 meter long cable system would have a slot time of:</P>
+      <P>2 <FONT face=Symbol>´</FONT> (500 <FONT face=Symbol>´</FONT> 4.1 <FONT 
+      face=Symbol>´</FONT> 10<SUP>-9</SUP>) + 10 <FONT face=Symbol>´</FONT> 10-6 
+      = 14 micro-seconds</P>
+      <P>Since the carrier-band network operates at 5 Mbits/second, each bit 
+      time is 0.2 microseconds and each octet time is 1.6 micro-seconds. The 
+      slot time in octets then becomes</P>
+      <P>14/1.6 = 8.75 octet times</P>
+      <P>Now back to contending for the logical ring.</P>
+      <P>During contention, all the stations that want to get into the logical 
+      ring listen for signals on the medium for 0, 1, 2, or 3 slot times. The 
+      amount of time a station waits is determined by taking the first pair of 
+      bits from its own address and determining the 0, 1, 2, or 3 slot times 
+      from that binary number. If a contending station hears no other station 
+      transmitting, then it sends a <B>set__successor </B>frame. This frame is 
+      one slot time long to the token holder. If a contending station hears 
+      anything during the time that it listens, that station eliminates itself 
+      from the contention. In this way, only one station gets into the logical 
+      ring every time the <B>resolve__contention </B>frame is sent.</P>
+      <P>If two stations have an identical first pair of bits in their 
+      addresses, then the stations will collide again. In this case, the 
+      procedure is repeated using the next pair of bits from the address. By the 
+      time all 48 bits of addresses are used, the contention is resolved, 
+      because eventually a pair of address bits for the two contending stations 
+      is different and only one station is admitted into the logical 
+ring.</P><B>
+      <P>Problem 4:</B> How does the logical ring get started initially? Or, 
+      what if a token gets lost?</P><B>
+      <P>Solution: </B>If a station is connected to the medium and hears no 
+      signals, or if the station has been in the logical ring but now does not 
+      hear any activity on the medium, then the token is presumed to be lost. 
+      The station now sends out a frame that says it is claiming the token. This 
+      <B>claim__token </B>frame is 0, 2, 4, or 6 slot times long (based on pairs 
+      of bits from the station's address). If, after sending out the 
+      <B>claim__token </B>frame the station hears no bus activity, it knows it 
+      has the token. If it hears activity, it assumes some other station has 
+      claimed the token.</P>
+      <P>This is a simplified explanation of how the token-passing protocol 
+      works. This protocol is implemented in semiconductor chips that work with 
+      the microprocessors in a network station. The people buying the factory 
+      automation equipment do not have to worry about the details of 
+      token-passing protocol built into the station.</P>
+      <P>The network manager has to know the concepts of token rotation time and 
+      slot time and how to calculate them, in order to set up the network 
+      correctly.</FONT><FONT face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>Priority</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">The data frames 
+      that are to be sent from a given station can be classified by their 
+      importance. The important frames can be given <B>priority </B>and sent 
+      first. Priority is an optional feature of any given station. Four classes 
+      of priority frames can be sent. Alarm and error messages could be assigned 
+      top priority. Real-time control messages could be the next priority file 
+      transfers the next, and periodic messages for time-of-day and other 
+      non-critical messages the last priority.</P>
+      <P>A token-holding station is allowed to send all the highest-priority 
+      frames it can within a time set by station management. When the time 
+      expires, then the token must be passed on.</P>
+      <P>For each of the lower-priority classes, a token rotation time is 
+      specified by the station management. If the actual token rotation time is 
+      less than the specified time, the station is allowed to send a priority 
+      message.</P>
+      <P>In a token bus system, the delay between when a frame is submitted for 
+      transmission and when it is actually sent can be calculated for a given 
+      system by knowing the number of stations, the size and frequency of frames 
+      that each station generates, and the priorities of the frames. When there 
+      is no load, the worst-case delay is the token rotation time. When the 
+      system is heavily loaded with the highest-priority messages, the delay is 
+      that of the token-passing time plus the time each station is allowed to 
+      send the first-priority messages.</FONT><FONT 
+      face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>Frame Structure</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">If a scope were 
+      used to look at signals on the cable, there would be a continuous stream 
+      of activity of various medium access control and data frames. as shown in 
+      Figure 4-2.</P></FONT><FONT face="Verdana, Arial, Helvetica">
+      <P><IMG height=59 alt="Token Bus Signal Activity" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/figure0402.gif" 
+      width=600><BR>Figure 4-2. Token Bus Signal Activity</FONT><FONT 
+      face="Georgia, Times New Roman, Times"></P>
+      <P>The short bursts of signal is the tokens being passed; the longer ones 
+      are the data frames. Figure 4-3 shows the structure of the data 
+      frame.</FONT><FONT face="Verdana, Arial, Helvetica"></P>
+      <P><IMG height=251 alt="Frame Structure" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/figure0403.gif" 
+      width=600><BR>Figure 4-3. Frame Structure</FONT><FONT 
+      face="Georgia, Times New Roman, Times"></P>
+      <P>Because the modem's receiving electronics need time to adapt to listen 
+      to the signal on the cable, each frame starts with a <B>preamble. </B>The 
+      preamble is like saying "pssst" to someone before starting to talk. It 
+      consists of six octets of alternating zeros and ones. Because the modem 
+      can lose some of these preamble bits, the station cannot simply depend on 
+      the number of preamble bits it received as an indication of where the real 
+      data starts. In order for the real data to be distinguished from the 
+      preamble, a <B>start delimiter </B>is used. The delimiter needs to be 
+      uniquely distinguished from the data that follow. For this reason, the 
+      start delimiter is made up of non-data symbols and zeros. Non-data symbols 
+      do not appear within the data portion of the frame.</P>
+      <P>One <B>frame control </B>octet is used to indicate the type of frame 
+      being sent (a token, a data frame, or a management frame), what the 
+      priority of the frame is, and other control information.</P>
+      <P>The frame must indicate which station on the shared medium it is 
+      intended for and which station it is sent from. This information is 
+      provided by the source and destination address fields. These addresses of 
+      physical stations on the medium are each 6 octets long.</P>
+      <P>Data follows the addresses. Data must be in integral octets up to 8191 
+      in length.</P>
+      <P>The cable and the modem are susceptible to noise, which destroys the 
+      data being sent. To guard against frames with corrupted data, the <B>Frame 
+      Check Sequence, FCS, </B>is used. <FONT face="Georgia, Times New Roman">As 
+      the data bits in the frame are transmitted, the transmitting station 
+      calculates the FCS code.</FONT> The FCS is attached to the end of the 
+      frame. When the frame is received, the FCS is calculated again by the 
+      receiving station from the received bits including the sent FCS. If the 
+      result is not a particular bit pattern, then there must have been some 
+      bits that were destroyed in the transmission process. Frames that have bad 
+      frame check sequences are discarded.</P>
+      <P>For the FCS technique to work, the receiver of the frame must 
+      accurately know where the frame ends. For this reason, an <B>end delimiter 
+      </B>is needed. The end delimiter is made up of non-data symbols and ones. 
+      As in the start delimiter, the non-data symbols are necessary so that any 
+      data sent in the data portion of the frame will not be confused with the 
+      end delimiter.</FONT><FONT face="Verdana, Arial, Helvetica"></P>
+      <P><BIG>MAC Services</BIG><BR></FONT><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10><BR><FONT face="Georgia, Times New Roman, Times">When the 
+      carrier-band modem was discussed in Section 3, it was easy to identify 
+      that part of the station; the modem was a box, a board, or a chip. The 
+      part of the station that has just been described is not as easy to 
+      identify. Some of the protocol is performed by a semiconductor chip; other 
+      parts are performed by software running in a microprocessor in the 
+      station. Conceptually, we can think of a "box" within the network station 
+      that performs these protocol tasks, as shown in Figure 
+      4-4.</P></FONT><FONT face="Verdana, Arial, Helvetica">
+      <P><IMG height=427 alt="MAC Functions" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/figure0404.gif" 
+      width=600><BR>Figure 4-4. MAC Functions</FONT><FONT 
+      face="Georgia, Times New Roman, Times"></P>
+      <P>In a transmitting station, the "box" gets a data block from a data 
+      source to send and then waits to get a token to gain access rights to the 
+      shared cable. If the priority is right, the "box" then sends a frame with 
+      a preamble, a start delimiter, an address field a control field, the data 
+      itself, the frame check sequences, and then the end delimiter.</P>
+      <P>In a receiving station, the "box" recognizes addresses and examines the 
+      FCS to see if good data has been received. The "box" discards corrupted 
+      frames and passes only good data blocks to a data destination "box" in the 
+      receiving station.</P>
+      <P>All together, this part of the network station is called the <B>Medium 
+      Access Control </B>or <B>MAC. </B>MAC performs a <B>service </B>for other 
+      "boxes" in the station, and it utilizes the service provided by the 
+      modem.</P>
+      <P>What has been described so far, the cable system, the modem, and the 
+      MAC token bus protocol, is directly related to the carrier-band network. 
+      Other protocols are needed to provide communication between two stations 
+      on the carrier-band network. These protocols deal with how reliable data 
+      transmission is achieved even when some of the frames are lost to noise. 
+      The protocols also deal with how the flow of data between a sending 
+      station and receiving station is regulated, and many, many other issues. 
+      These higher protocols, which are the same for the factory broadband 
+      network and even other types of networks, will be discussed in Sections 5 
+      and 6.</FONT><FONT face="Verdana, Arial, Helvetica"></P></FONT><FONT 
+      face="Georgia, Times New Roman, Times"><B>
+      <P></B></FONT>&nbsp;</P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">
+      <P align=left></FONT></B><BIG><FONT 
+      face="Verdana, Arial, Helvetica">Terms</FONT></BIG></P></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Address</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">An 
+      identification of a station.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Collision</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      result of two or more stations transmitting simultaneously and getting the 
+      signals garbled.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Contention</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      process by which multiple stations attempt to get into the logical ring 
+      during the same response window.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Deterministic</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      network in which the time between when a station needs to transmit and 
+      when it is permitted to, so it can be calculated.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Destination Address</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      address of the station for which a frame is intended.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">End Delimiter</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">An 
+      octet that defines the end of a frame.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Frame</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      group of contiguous bits.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Frame Check Sequence, 
+    FCS</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      code that is used to determine whether a frame was received 
+      correctly.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">Frame Control</FONT></B></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">An 
+      octet in a frame that identifies the type of the frame.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">
+      <P align=left></FONT></B><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></P></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Logical Ring</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      group of stations that pass the token to each other.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Medium Access Control, 
+      MAC</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      part of a station that performs the protocols needed for sharing the 
+      cable.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Octet</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">An 
+      8-bit byte.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Preamble</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      initial signal of a frame to get the modem ready to receive.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Priority</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT 
+      face="Georgia, Times New Roman, Times">Ability to give transmission 
+      preference to more important frames.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><B><FONT 
+      face="Georgia, Times New Roman, Times">
+      <P align=left></FONT></B><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></P></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Protocol</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT 
+      face="Georgia, Times New Roman, Times">Rules that all stations must follow 
+      in order to communicate.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Response Window</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">Time 
+      during which a new station is admitted into the logical ring.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Service</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      group of tasks that one part of a station performs for another part of the 
+      station.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Slot Time</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      worst-case time between when a station sends a frame and the time when it 
+      can get a response.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Source Address</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      address of the station sending a frame.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Start Frame 
+    Delimiter</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">An 
+      octet that defines the start of real data in a frame.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Token</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      right to transmit.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133>
+      <P align=left><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></P></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Token Passing</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">A 
+      deterministic protocol for gaining access to a shared cable.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD vAlign=top align=right width=133><FONT 
+      face="Georgia, Times New Roman, Times"><B>Token Rotation 
+Time</B></FONT></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581><FONT face="Georgia, Times New Roman, Times">The 
+      time it takes for a token to be passed around the logical 
+  ring.</FONT></TD></TR>
+  <TR>
+    <TD vAlign=top align=left width=133>
+      <P align=left><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></P></TD>
+    <TD align=right width=19></TD>
+    <TD vAlign=top width=581></TD></TR>
+  <TR>
+    <TD width=733 colSpan=3><IMG height=10 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/10x10.gif" 
+      width=10></TD></TR></TBODY></TABLE></CENTER></DIV>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+  <TBODY>
+  <TR>
+    <TD><BIG><FONT face="Verdana, Arial, Helvetica">| <A 
+      href="http://www.relcominc.com/carrier-band/handbook/index.htm">Index</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter01.htm">1</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter02.htm">2</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter03.htm">3</A> 
+      <STRONG><BIG><A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter04.htm">4</A></BIG></STRONG> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter05.htm">5</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter06.htm">6</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter07.htm">7</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/chapter08.htm">8</A> 
+      <A 
+      href="http://www.relcominc.com/carrier-band/handbook/glossary.htm">G</A> 
+      |</FONT></BIG></TD></TR>
+  <TR>
+    <TD>
+      <P align=right><FONT face="Georgia, Times New Roman, Times"><A 
+      href="http://www.relcominc.com/index.htm"><IMG height=24 
+      alt="Go to the Relcom Home Page" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/home.gif" 
+      width=70 border=0></A><A href="http://www.relcominc.com/sitemap.htm"><IMG 
+      height=24 alt="View the Relcom Site Map" 
+      src="4  Token Bus Operation  Carrier-band Network Handbook  Relcom Inc_files/sitemapbar.gif" 
+      width=80 border=0></A></FONT></P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><FONT 
+      face="Georgia, Times New Roman, Times"><EM><SMALL><SMALL>Copyright 
+      </SMALL></SMALL><SMALL><SMALL>1996-2002</SMALL></SMALL><SMALL><SMALL> <A 
+      href="http://www.relcominc.com/contact.htm">Relcom Inc.</A> All rights 
+      reserved</SMALL></SMALL></EM></FONT></P></TD></TR></TBODY></TABLE></CENTER></DIV></BODY></HTML>

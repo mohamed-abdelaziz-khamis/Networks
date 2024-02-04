@@ -1,0 +1,149 @@
+NetworkBus Network, in computer science, a topology
+(configuration) for a local area network in which all nodes
+are connected to a main communications line (bus). On a bus
+network, each node monitors activity on the line. Messages
+are detected by all nodes but are accepted only by the
+node(s) to which they are addressed. Because a bus network
+relies on a common data "highway," a malfunctioning node
+simply ceases to communicate; it doesn't disrupt operation
+as it might on a ring network, in which messages are passed
+from one node to the next. To avoid collisions that occur
+when two or more nodes try to use the line at the same
+time, bus networks commonly rely on collision detection or
+Token Passing to regulate traffic.Star NetworkStar Network,
+in computer science, a local area network in which each
+device (node) is connected to a central computer in a
+star-shaped configuration (topology); commonly, a network
+consisting of a central computer (the hub) surrounded by
+terminals. In a star network, messages pass directly from a
+node to the central computer, which handles any further
+routing (as to another node) that might be necessary. A
+star network is reliable in the sense that a node can fail
+without affecting any other node on the network. Its
+weakness, however, is that failure of the central computer
+results in a shutdown of the entire network. And because
+each node is individually wired to the hub, cabling costs
+can be high.Ring networkRing Network, in computer science,
+a local area network in which devices (nodes) are connected
+in a closed loop, or ring. Messages in a ring network pass
+in one direction, from node to node. As a message travels
+around the ring, each node examines the destination address
+attached to the message. If the address is the same as the
+address assigned to the node, the node accepts the message;
+otherwise, it regenerates the signal and passes the message
+along to the next node in the circle. Such regeneration
+allows a ring network to cover larger distances than star
+and bus networks. It can also be designed to bypass any
+malfunctioning or failed node. Because of the closed loop,
+however, new nodes can be difficult to add. A ring network
+is diagrammed below.Asynchrous Transfer ModeATM is a new
+networking technology standard for high-speed,
+high-capacity voice, data, text andvideo transmission that
+will soon transform the way businesses and all types of
+organizationscommunicate. It will enable the management of
+information, integration of systems andcommunications
+between individuals in ways that, to some extent, haven't
+even been conceived yet. ATM can transmit more than 10
+million cells per second,resulting in higher capacity,
+faster delivery and greater reliability. ATM simplifies
+information transfer and exchange by compartmentalizing
+information into uniformsegments called cells. These cells
+allow any type of information--from voice to video--to
+betransmitted over almost any type of digitized
+communications medium (fiber optics, copper wire,cable).
+This simplification can eliminate the need for redundant
+local and wide area networks anderadicate the bottlenecks
+that plague current networking systems. Eventually, global
+standardizationwill enable information to move from country
+to country, at least as fast as it now moves from officeto
+office, in many cases faster.Fiber Distributed Data
+InterfaceThe Fiber Distributed Data Interface (FDDI)
+modules from Bay Networks are designed forhigh-performance,
+high-availability connectivity in support of internetwork
+topologies that include:
+ 
+Campus or building backbone networks for lower speed LANs
+Interconnection of mainframes or minicomputers to
+peripherals LAN interconnection for workstations requiring
+high-performance networking FDDI is a 100-Mbps
+token-passing LAN that uses highly reliable fiber-optic
+media and performs automatic fault recovery through dual
+counter-rotating rings. A primary ring supports normal
+datatransfer while a secondary ring allows for automatic
+recovery. Bay Networks FDDI supportsstandards-based
+translation bridging and multiprotocol routing. It is also
+fully compliant with ANSI,IEEE, and Internet Engineering
+Task Force (IETF) FDDI specifications.Bay Networks FDDI
+interface features a high-performance second-generation
+Motorola FDDI chipset in a design that provides
+cost-effective high-speed communication over an FDDI
+network. TheFDDI chip set provides expanded functionality
+such as transparent and translation bridging as wellas many
+advanced performance features. Bay Networks FDDI is
+available in three versions -multimode, single-mode, and
+hybrid. All versions support a Class A dual attachment or
+dual homingClass B single attachment.Bay Networks FDDI
+provides the performance required for the most demanding
+LAN backboneand high-speed interconnect applications.
+Forwarding performance over FDDI exceeds 165,000packets per
+second (pps) in the high-end BLN and BCN. An innovative
+High-Speed Filters optionfilters packets at wire speed,
+enabling microprocessor resources to remain dedicated to
+packetforwarding.Data Compression In GraphicsMPEGMPEG is a
+group of people that meet under ISO (the International
+Standards Organization) to generate standards for digital
+video (sequences of images in time) and audio compression.
+In particular, they define a compressed bit stream, which
+implicitly defines a decompressor. However, the compression
+algorithms are up to the individual manufacturers, and that
+is where proprietary advantage is obtained within the scope
+of a publicly available international standard. MPEG meets
+roughly four times a year for roughly a week each time. In
+between meetings, a great deal of work is done by the
+members, so it doesn't all happen at the meetings. The work
+is organized and planned at the meetings. So far (as of
+January 1996), MPEG have completed the "Standard of MPEG
+phase called MPEG I. This defines a bit stream for
+compressed video and audio optimized to fit into a
+bandwidth (data rate) of 1.5 Mbits/s. This rate is special
+because it is the data rate of (uncompressed) audio CD's
+and DAT's. The standard is in three parts, video, audio,
+and systems, where the last part gives the integration of
+the audio and video streams with the proper timestamping to
+allow synchronization of the two. They have also gotten
+well into MPEG phase II, whose task is to define a
+bitstream for video and audio coded at around 3 to 10
+Mbits/s.How MPEG I worksFirst off, it starts with a
+relatively low resolution video sequence (possibly
+decimated from the original) of about 352 by 240 frames by
+30 frames/s, but original high (CD) quality audio. The
+images are in color, but converted to YUV space, and the
+two chrominance channels (U and V) are decimated further to
+176 by 120 pixels. It turn out that you can get away with a
+lot less resolution in those channels and not notice it, at
+least in "natural" (not computer generated) images. The
+basic scheme is to predict motion from frame to frame in
+the temporal direction, and then to use DCT's (discrete
+cosine transforms) to organize the redundancy in the
+spatial directions. The DCT's are done on 8x8 blocks, and
+the motion prediction is done in the luminance (Y) channel
+on 16x16 blocks. In other words, given the 16x16 block in
+the current frame that you are trying to code, you look for
+a close match to that block in a previous or future frame
+(there are backward prediction modes where later frames are
+sent first to allow interpolating between frames). The DCT
+coefficients (of either the actual data, or the difference
+between this block and the close match) are "quantized",
+which means that you divide them by some value to drop bits
+off the bottom end. Hopefully, many of the coefficients
+will then end up being zero. The quantization can change
+for every "macroblock" (a macroblock is 16x16 of Y and the
+corresponding 8x8's in both U and V). The results of all of
+this, which include the DCT coefficients, the motion
+vectors, and the quantization parameters (and other stuff)
+is Huffman coded using fixed tables. The DCT coefficients
+have a special Huffman table that is "two-dimensional" in
+that one code specifies a run-length of zeros and the
+non-zero value that ended the run. Also, the motion vectors
+and the DC DCT components are DPCM (subtracted from the
+last one) coded.

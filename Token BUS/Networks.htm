@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0054)http://www.acerimmeronline.com/networks/token_bus.html -->
+<HTML><HEAD><TITLE>Networks</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="Networks_files/network_style.css" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY class=main><IMG height=80 src="Networks_files/header.gif" width=780 
+useMap=#menu border=0> <MAP name=menu><AREA shape=RECT target=_self 
+  coords=56,55,97,73 
+  href="http://www.acerimmeronline.com/networks/networks_home.html"><AREA 
+  shape=RECT target=_self coords=113,55,128,73 
+  href="http://www.acerimmeronline.com/networks/networks_a.html"><AREA 
+  shape=RECT target=_self coords=132,55,147,73 
+  href="http://www.acerimmeronline.com/networks/networks_b.html"><AREA 
+  shape=RECT target=_self coords=151,55,166,73 
+  href="http://www.acerimmeronline.com/networks/networks_c.html"><AREA 
+  shape=RECT target=_self coords=170,55,185,73 
+  href="http://www.acerimmeronline.com/networks/networks_d.html"><AREA 
+  shape=RECT target=_self coords=189,55,204,73 
+  href="http://www.acerimmeronline.com/networks/networks_e.html"><AREA 
+  shape=RECT target=_self coords=208,55,223,73 
+  href="http://www.acerimmeronline.com/networks/networks_f.html"><AREA 
+  shape=RECT target=_self coords=227,55,242,73 
+  href="http://www.acerimmeronline.com/networks/networks_g.html"><AREA 
+  shape=RECT target=_self coords=246,55,261,73 
+  href="http://www.acerimmeronline.com/networks/networks_h.html"><AREA 
+  shape=RECT target=_self coords=265,55,280,73 
+  href="http://www.acerimmeronline.com/networks/networks_i.html"><AREA 
+  shape=RECT target=_self coords=284,55,299,73 
+  href="http://www.acerimmeronline.com/networks/networks_j.html"><AREA 
+  shape=RECT target=_self coords=303,55,318,73 
+  href="http://www.acerimmeronline.com/networks/networks_k.html"><AREA 
+  shape=RECT target=_self coords=322,55,337,73 
+  href="http://www.acerimmeronline.com/networks/networks_l.html"><AREA 
+  shape=RECT target=_self coords=341,55,356,73 
+  href="http://www.acerimmeronline.com/networks/networks_m.html"><AREA 
+  shape=RECT target=_self coords=360,55,375,73 
+  href="http://www.acerimmeronline.com/networks/networks_n.html"><AREA 
+  shape=RECT target=_self coords=379,55,394,73 
+  href="http://www.acerimmeronline.com/networks/networks_o.html"><AREA 
+  shape=RECT target=_self coords=398,55,413,73 
+  href="http://www.acerimmeronline.com/networks/networks_p.html"><AREA 
+  shape=RECT target=_self coords=417,55,432,73 
+  href="http://www.acerimmeronline.com/networks/networks_q.html"><AREA 
+  shape=RECT target=_self coords=436,55,451,73 
+  href="http://www.acerimmeronline.com/networks/networks_r.html"><AREA 
+  shape=RECT target=_self coords=455,55,470,73 
+  href="http://www.acerimmeronline.com/networks/networks_s.html"><AREA 
+  shape=RECT target=_self coords=474,55,489,73 
+  href="http://www.acerimmeronline.com/networks/networks_t.html"><AREA 
+  shape=RECT target=_self coords=493,55,508,73 
+  href="http://www.acerimmeronline.com/networks/networks_u.html"><AREA 
+  shape=RECT target=_self coords=512,55,527,73 
+  href="http://www.acerimmeronline.com/networks/networks_v.html"><AREA 
+  shape=RECT target=_self coords=533,55,548,73 
+  href="http://www.acerimmeronline.com/networks/networks_w.html"><AREA 
+  shape=RECT target=_self coords=552,55,567,73 
+  href="http://www.acerimmeronline.com/networks/networks_x.html"><AREA 
+  shape=RECT target=_self coords=571,55,586,73 
+  href="http://www.acerimmeronline.com/networks/networks_y.html"><AREA 
+  shape=RECT target=_self coords=590,55,605,73 
+  href="http://www.acerimmeronline.com/networks/networks_z.html"><AREA 
+  shape=RECT target=_top coords=622,55,773,73 
+  href="http://www.acerimmeronline.com/index.html"></MAP><BR>
+<H4 class=center>Token Bus </H4>
+<P class=main>Token Bus is described in the IEEE 802.4 specification and is a <A 
+href="http://www.acerimmeronline.com/networks/lan.html">Local Area Network</A> 
+in which the stations on the bus or tree form a logical ring. They are assigned 
+positions in an ordered sequence, with the last node in the sequence being 
+followed by the first, as shown below. Each station knows the address of the 
+station to its "left" and "right" in the sequence. </P>
+<DIV class=center><IMG alt="Original Ethernet Frame" 
+src="Networks_files/token_bus.gif"> </DIV>
+<P class=main>This scheme is similar to <A 
+href="http://www.acerimmeronline.com/networks/token_ring.html">Token Ring</A>, 
+in that a small data frame only a few bytes in size, known as a <EM>token</EM>, 
+is used to gain network access. <EM>Token-passing networks</EM> rely on a 
+deterministic method of accessing the network in which each node plays an active 
+part in managing access and avoiding collisions. When a station receives the 
+token, it is granted control of the medium for a specified time. The station may 
+transmit one or more packets, and may poll stations and receive responses. When 
+the station has finished with the token, or the time limit has expired, it 
+passes the token on to the next station in the logical sequence, which takes 
+over control of the medium. When the logical ring is initialised, the station 
+having the highest number in the sequence has control of the token. </P>
+<P class=main>The physical.order in which stations are connected to the cable is 
+not important. Since the cable is essentially a broadcast medium, each station 
+receives each frame, but discards frames that are not addressed to it. Each 
+station sends a token that is logically addressed to the next station in the 
+sequence, regardless of its physical location on the cable. It should be noted 
+that when individual stations are first powered on, they are not in the logical 
+ring (note that in the above diagram, station 2 is not in the ring). The Token 
+Bus MAC protocol makes provisions for adding stations to the ring or deleting 
+them from the ring as and when this is required. </P>
+<P class=main>The Token Bus standard was designed to meet the needs of 
+industrial automation systems following a proposal by General Motors for a 
+protocol for use in manufacturing plants - Manufacturing Automation Protocol 
+(MAP). <A href="http://www.acerimmeronline.com/networks/ethernet.html">IEEE 
+802.3</A> was not considered suitable for factory automation because of the 
+contention-based nature of its MAC protocol, which meant that stations might 
+have to wait a long time to send a frame. The lack of a prioritisation system 
+also makes Ethernet unsuitable for real time systems in which important frames 
+should not be held up for less urgent traffic. </P>
+<P class=main>Token-passing, in which each station takes turns to send a frame, 
+was considered a better option because if there are <EM>n</EM> stations, and 
+each station takes <EM>T</EM> seconds to send a frame, no station has to wait 
+longer than <EM>nT</EM> seconds to send a frame. The ring topology of existing 
+token-passing systems, however, was seen as a disadvantage, because a break in 
+the ring meant network failure. Furthermore, a ring topology is a poor fit to 
+the linear topology of most assembly lines. Thus, Token Bus was developed, 
+having the robustness of the 802.3 broadcast cable, but with the known worst 
+case behaviour of a ring topology. </P>
+<P class=main>The transmission medium used for Token Bus networks is 75 Ohm 
+broadband coaxial cable - the same type of cable used for cable TV, although 
+both baseband and broadband configurations are available. Both single and dual 
+cable systems may be used, with or without head-ends. Possible data rates are 1, 
+5 and 10 Mbps. The permitted analog modulation schemes are: </P>
+<UL class=main>
+  <LI>phase continuous frequency shift keying 
+  <LI>phase coherent frequency shift keying 
+  <LI>multilevel duobinary amplitude modulated phase shift keying </LI></UL>
+<H4 class=left>The Token Bus MAC Layer Protocol </H4>
+<P class=main>On initialisation of the ring, tokens are insrted into it in 
+station address order, starting with the highest. Token-passing also takes place 
+from high addresse to low addresses. When a station aquires the token it has a 
+specified amount of time in which to transmit frames, so the number of 
+consecutive frames which can be transmitted by each station depends on the 
+length of the frames. If a station has no frames to send, it immediately passes 
+the token to the next station. </P>
+<P class=main>The Token Bus standard defines four classes of priority for 
+traffic - 0, 2, 4, and 6 - with 6 being the highest priority and 0 being the 
+lowest. Each station maintains four separate internal queues corresponding to 
+the four priority levels. When a frame is passed down to the MAC sublayer from a 
+higher protocol, its priority is checked and it is assigned to the appropriate 
+queue. When a station receives the token, it is passed to the highest priority 
+queue (level 6) first. If this queue does not have any frames to send, the token 
+is passed to the next highest priority queue (level 4) and so on. </P>
+<P class=main>Each queue has a specified time in which to transmit frames, after 
+which it must relinquish the token to the next queue. If the token reaches level 
+0 and there are no frames to be sent, the token immediately passes to the next 
+station. This process is controlled by timers, which can be used to allocate a 
+specified time to each queue, depending on priority. If the highest level queue 
+has no frames to send, its allocated time can be used by the lower priority 
+queues. </P>
+<P class=main>This priority scheme guarantees priority 6 traffic a known 
+fraction of the network bandwith, and can be used to implement real-time 
+traffic. For example, if a network running at 10 Mbps and having 50 stations has 
+been configured so that piority 6 traffic is allocated 1/3 of the bandwidth, 
+each station is guaranteed 67 kbps for priority 6 traffic. This bandwidth could 
+be used to synchronise robots on an assembly line, or carry one digital voice 
+channel per station with some bandwidth left over for control information. </P>
+<DIV class=center><IMG alt="Token Bus Frame" 
+src="Networks_files/token_bus_frame.gif"> </DIV>
+<P class=main>The Token Bus frame format is shown above. The <EM>Preamble</EM> 
+is used to synchronise the receiver's clock. The <EM>Start Delimeter</EM> and 
+<EM>End Delimeter</EM> fields are used to mark the frame boundaries. These 
+fields contain analog encoding of symbols other than 0s and 1s, so they cannot 
+occur accidentally in user data. Because of this, no length field is required. 
+</P>
+<P class=main>The <EM>Frame Control</EM> field is used to distinguish data 
+frames from control frames. For data frames, it includes the frame's priority. 
+It can also include an indicator requiring that the destination station 
+acknowledge correct or incorrect receipt of the frame. For control frames, the 
+Frame Control field is used to specify the frame type. This includes token 
+passing and various ring maintenance frames, including the mechanism for 
+allowing stations to enter or leave the ring. </P>
+<P class=main>The <EM>Destination</EM> and <EM>Source</EM> address fields in any 
+given network must use all 2-byte addresses or all 6-byte addresses, not a 
+mixture on the same cable. If 2-byte addresses are used, the <EM>Data Field</EM> 
+can be upt 8182 bytes. If 6-byte addresses are used it is limited to 8174 bytes. 
+The <EM>Checksum</EM> is used to detect transmission errors. </P>
+<P class=main>The various control frames used are shown in the following table. 
+</P>
+<DIV class=center><IMG alt="Token Bus Frame" 
+src="Networks_files/token_bus_control_frames.gif"> </DIV>
+<P class=main>Periodically, a station will transmit a SOLIT_SUCCESSOR frame to 
+solicit bids from stations wishing to join the ring. The frame incluedes the 
+sender's address, and that of its current successor in the ring. Only stations 
+with an address falling between these two addresses may bid to enter the ring 
+(in order to maintain the logical order of station addresses on the ring). If no 
+station bids to enter within a slot time, the response window is closed, and the 
+token holder returns to its normal business. If only one station bids to enter, 
+it is inserted into the ring and becomes the token holder's successor. If two or 
+more stations bid to enter, their frames will collide and be garbled. The token 
+holder then runs an arbitration starting with the broadcast of a 
+RESOLVE_CONTENTION frame. The algorithm is a variation of binary countdown, 
+using two bits at a time. </P>
+<P class=main>All station interfaces maintain two random bits which are used to 
+delay all bids by 0, 1, 2 or 3 slot times to further reduce contention. Two 
+stations will only collide on a bid, therefore, if the current two address bits 
+being used are the same and they happen to have the same two random bits. To 
+prevent stations that must wait 3 slot times from being at a permanent 
+disadvantage, the random bits are regenerated either every time they are used, 
+or every 50 msec. </P>
+<P class=main>The solicitation of new stations is not permitted to interfere 
+with the guaranteed worst case for token rotation. Each station has a timer that 
+is reset whenever it aquires the token. When the token arrives, the old value of 
+this timer (i.e. the previous token rotation time) is inspected before the timer 
+is reset. If a certain threshold value has been exceeded, there has been too 
+much traffic recently, so no bids may be solicited this time round. In any case, 
+only one station can enter the ring at each solicitation to limit the amount of 
+time which can be used for ring maintenance. There is no guaranteed time limit 
+set on how long a station has to wait to enter the ring when traffic is heavy, 
+but in practice it is not normally longer than a few seconds. </P>
+<P class=main>To leave the ring, a station X with a predecessor P and a 
+successor S simply sends a SET_SUCCESSOR frame to P telling it that from now on 
+its successor is S. Station X then just stops transmitting. </P>
+<P class=main>Ring initialisation is a special case of adding new stations. When 
+the first station comes on line, it registers the fact that there is no traffic 
+for a certain period. It then sends a CLAIM_TOKEN frame. Not hearing any other 
+stations contending for the token, it creates a token and sets up a ring 
+containing only itself. Periodically, it solicits bids for new stations. As new 
+stations are powered on, they will respond and join the ring, if necessary using 
+the contention algorithm described above. If the first two stations are powered 
+on simultaneously, they are allowed to bid for the token using the standard 
+modified binary countdown algorithm and the two random bits. </P>
+<P class=main>Problems sometimes arise with the token or the logical ring due to 
+transmission errors (for example a station tries to pass a token to a station 
+which has gone down). After passing the token, therefore, a station listens to 
+see if its successor either transmits a frame or passes the token. If neither 
+occurs, it generates a further token. If that also produces negative results, 
+the station transmits a WHO_FOLLOWS frame specifying the address of its 
+successor. When the failed station's successor sees a WHO_FOLLOWS frame naming 
+its predecessor, it responds by sending a SET_SUCCESSOR frame to the station 
+whose successor failed, naming itself as the new successor, and the failed 
+station is removed from the ring. </P>
+<P class=main>If two consecutive stations have gone down, the WHO_FOLLOWS frame 
+will obviously fail to ellicit a response. In this situation, the station which 
+originally passed the token sends a SOLICIT_SUCCESSOR_2 frame to see if any 
+other stations are still alive. The standard connection protocol is run once 
+again, with all stations that want to be in the ring now bidding for a place, 
+and the ring is eventually re-established. </P>
+<P class=main>A problem also occurs if the token holder goes down and takes the 
+frame with it. In this case, the ring initialisation algorithm is used. Each 
+station has a timer that is reset every time a frame appears on the network. 
+When this timer hits a threshold value, yhe station issues a CLAIM_TOKEN frame, 
+and the modified binary countdown algorithm with random bits determines who gets 
+the token. </P>
+<P class=main>Multiple tokens are another problem. If a station holding the 
+token notices a transmission from another station, it discards its token. If 
+more than two tokens are present on the network at the same time, this process 
+is repeated until all but one of the tokens are discarded. If all the tokens are 
+discarded by accident, the lack of activity will cause one or more of the 
+stations to try and claim the token. </P><BR></BODY></HTML>

@@ -1,0 +1,75 @@
+BODY {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial
+}
+SPAN {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial
+}
+DIV {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial
+}
+A {
+	COLOR: #0000ff; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #0000ff; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #0000ff; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+A:unknown {
+	COLOR: #0000ff; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #0000ff; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #ff6600; FONT-STYLE: normal; TEXT-DECORATION: underline
+}
+.tdw {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; FONT-STYLE: normal; FONT-FAMILY: Verdana, Geneva, Arial
+}
+.tdw A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tdw A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tdw A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.hyper {
+	FONT-SIZE: 12px; COLOR: #333333; FONT-FAMILY: Verdana, Geneva, Arial
+}
+.hyper A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.hyper A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+.hyper A:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.fine {
+	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #666666; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-VARIANT: small-caps
+}
+.fine A:link {
+	FONT-SIZE: 10px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+.fine A:visited {
+	FONT-SIZE: 10px; COLOR: #0000ff; TEXT-DECORATION: none
+}
+.fine A:hover {
+	FONT-SIZE: 10px; COLOR: #ff6600; TEXT-DECORATION: none
+}
+.inptxt {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffcc
+}
+.button {
+	BORDER-RIGHT: #873902 2px solid; PADDING-RIGHT: 4px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 4px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BORDER-LEFT: #ebebeb 2px solid; CURSOR: hand; BORDER-BOTTOM: #873902 2px solid; FONT-FAMILY: arial, Tahoma; HEIGHT: 20px; BACKGROUND-COLOR: #fc6a03
+}
+.textfield {
+	BORDER-RIGHT: #808080 1px solid; BORDER-TOP: #808080 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #808080 1px solid; WIDTH: 200px; COLOR: #000000; BORDER-BOTTOM: #808080 1px solid; FONT-FAMILY: Tahoma, Arial; HEIGHT: 17px; BACKGROUND-COLOR: #ffffff
+}
